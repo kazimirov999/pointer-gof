@@ -8,8 +8,8 @@ public class App {
         AbstractFactory abstractFactory = null;
         if ("cola".equals(args[0])) {
             abstractFactory = new CocaColaFactory();
-        }else if("fanta".equals(args[0])){
-            abstractFactory = new FantaFactory();
+        }else if("Regina".equals(args[0])){
+            abstractFactory = new ReginaFactory();
         }
 
         Client client = new Client(abstractFactory);
