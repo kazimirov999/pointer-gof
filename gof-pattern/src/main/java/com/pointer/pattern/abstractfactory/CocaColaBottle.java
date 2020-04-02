@@ -3,7 +3,7 @@ package com.pointer.pattern.abstractfactory;
 public class CocaColaBottle extends Bottle {
 
 
-    int fill(Water water) {
+   double fill(Water water) {
         return 2;
     }
 }
