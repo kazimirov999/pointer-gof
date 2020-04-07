@@ -1,19 +1,15 @@
 package com.pointer.pattern.abstractfactory;
 
+import static com.pointer.pattern.abstractfactory.CarFactory.buildCar;
+
 /**
  * Hello world!
  */
 public class App {
 
     public static void main(String... args) {
-        AbstractFactory abstractFactory = null;
-        if ("cola".equals(args[0])) {
-            abstractFactory = new CocaColaFactory();
-        } else if ("karavan".equals(args[0])) {
-            abstractFactory = new KaravanFactory();
-
-            Client client = new Client(abstractFactory);
-            client.run();
-        }
+        System.out.println(buildCar(CarType.HETCH, FuelType.GASOLINE));
+        System.out.println(buildCar(CarType.SEDAN, FuelType.DIESEL));
+        System.out.println(buildCar(CarType.COUPE, FuelType.HYBRID));
     }
 }
